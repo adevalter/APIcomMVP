@@ -19,11 +19,13 @@ class PostagemPresenter(
 
     private val coroutine = CoroutineScope(Dispatchers.IO)
     fun recuperarPostagens(){
+        view.carregando(true)
        coroutine.launch {
            val postagens = postagemApi.recuperarPostagens()
            //Log.i("Lista", "recuperarPostagens: $postagens")
            withContext(Dispatchers.Main){
                view.exibirPostagem( postagens)
+               view.carregando(false)
            }
        }
     }

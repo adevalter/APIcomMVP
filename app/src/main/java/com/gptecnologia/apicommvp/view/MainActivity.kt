@@ -2,6 +2,7 @@ package com.gptecnologia.apicommvp.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.window.OnBackInvokedDispatcher
 import com.gptecnologia.apicommvp.R
 import com.gptecnologia.apicommvp.databinding.ActivityMainBinding
@@ -42,6 +43,14 @@ class MainActivity : AppCompatActivity(),
             textoResultado += "${postagem.id} - ${postagem.title} \n"
         }
         binding.textResultado.text = textoResultado
+    }
+
+    override fun carregando(exibirCarregando: Boolean) {
+        if(exibirCarregando)
+            binding.progressBar.visibility = View.VISIBLE
+        else
+            binding.progressBar.visibility = View.GONE
+
     }
 
 
