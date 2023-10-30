@@ -3,7 +3,7 @@ package com.gptecnologia.apicommvp.api
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-object RefrofitService{
+object RetrofitService{
     fun recuperarJsonPlace(): JsonPlaceApi {
         return Retrofit.Builder()
             .baseUrl("https://jsonplaceholder.typicode.com")

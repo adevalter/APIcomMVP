@@ -15,4 +15,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
     }
+
+    override fun onStart() {
+        super.onStart()
+
+    }
 }
