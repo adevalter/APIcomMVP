@@ -6,5 +6,5 @@ import retrofit2.http.GET
 
 interface JsonPlaceApi {
     @GET("posts")
-    fun recuperarPostagem() : Response< List<Postagem>>
+    suspend fun recuperarPostagem() : Response< List<Postagem>>
 }

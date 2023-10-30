@@ -5,7 +5,7 @@ import retrofit2.Response
 
 class PostagemApi {
 
-    fun recuperarPostagens() : List<Postagem>{
+    suspend fun recuperarPostagens() : List<Postagem>{
 
         val jsonPlace = RetrofitService.recuperarJsonPlace()
         var retorno: Response<List<Postagem>>? = null
